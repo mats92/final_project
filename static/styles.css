@@ -14,3 +14,17 @@ nav .navbar-brand .blue
 .left-align {
     text-align: left;
 }
+
+/* column position */
+.column
+{
+    float: left;
+    width: 50%;
+}
+
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
