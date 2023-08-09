@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Primus ES: Garums</title>
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+
+  <body>
+    <h1>Garuma konvertācija</h1>
+    <label>Garums: </label>
+    <input type="number" id="value" placeholder="Enter length">
+
+    <label>No: </label>
+    <select id="fromUnit">
+      <option value="metri">Metri</option>
+      <option value="centimetri">Centimetri</option>
+      <option value="milimetri">Milimetri</option>
+      <option value="pēdas">Pēdas</option>
+    </select>
+
+    <label>Uz: </label>
+    <select id="toUnit">
+      <option value="metri">Metri</option>
+      <option value="centimetri">Centimetri</option>
+      <option value="milimetri">Milimetri</option>
+      <option value="pēdas">Pēdas</option>
+    </select>
+
+    <button onclick="convertLength()">Konvertēt</button>
+
+    <div id="result" class="result"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

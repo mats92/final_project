@@ -28,3 +28,7 @@ nav .navbar-brand .blue
     display: table;
     clear: both;
 }
+
+.result {
+    margin-top: 10px;
+}

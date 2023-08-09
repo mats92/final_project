@@ -1,13 +1,55 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html>
 
-{% block title %}
-    Garums
-{% endblock %}
+<head>
+    <title>Length Converter</title>
+</head>
 
-{% block main %}
+<body>
+    <h1>Length Converter</h1>
+    <label for="value">Value:</label>
+    <input type="number" id="value" placeholder="Enter value">
+    
+    <label for="fromUnit">From:</label>
+    <select id="fromUnit">
+        <option value="meters">Meters</option>
+        <option value="feet">Feet</option>
+    </select>
+    
+    <label for="toUnit">To:</label>
+    <select id="toUnit">
+        <option value="meters">Meters</option>
+        <option value="feet">Feet</option>
+    </select>
 
-<div>
-    <h1>Garuma mērvienibas pārvēršana starp cm/inch</h1>
-</div>    
+    <button onclick="convertLength()">Convert</button>
 
-{% endblock %}
+    <div id="result"></div>
+
+    <script>
+        function convertLength() {
+            const inputValue = parseFloat(document.getElementById('value').value);
+            const fromUnit = document.getElementById('fromUnit').value;
+            const toUnit = document.getElementById('toUnit').value;
+
+            if (isNaN(inputValue)) {
+                document.getElementById('result').innerText = 'Please enter a valid number for the value.';
+                return;
+            }
+
+            let convertedValue;
+
+            if (fromUnit === 'meters' && toUnit === 'feet') {
+                convertedValue = inputValue * 3.28084;
+            } else if (fromUnit === 'feet' && toUnit === 'meters') {
+                convertedValue = inputValue / 3.28084;
+            } else {
+                convertedValue = inputValue; // If both units are the same, no conversion needed
+            }
+
+            document.getElementById('result').innerText = `Converted value: ${convertedValue.toFixed(2)} ${toUnit}`;
+        }
+    </script>
+</body>
+
+</html>
