@@ -1,0 +1,34 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+
+/* Left allign */
+.left-align {
+    text-align: left;
+}
+
+/* column position */
+.column
+{
+    float: left;
+    width: 50%;
+}
+
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.result {
+    margin-top: 10px;
+}
