@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primus ES: Temperatura</title>
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+
+  <body>
+    <h1>Temperaturas konvertacija</h1>
+    <div>
+        <p>Celsija grādi</p>
+    </div>
+    <div>
+      <input placeholder="Celsija" id="celsija" type="number" oninput="temperaturaUzFar()">
+    </div>
+    <div>
+      <p>Fārenheita grādi</p>
+      <input placeholder="Fārenheita" id="farenheita" type="number" oninput="temperaturaUzCel() ">
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

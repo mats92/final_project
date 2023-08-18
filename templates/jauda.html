@@ -1,20 +1,33 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primus ES: Jauda</title>
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
 
-{% block title %}
-    Index
-{% endblock %}
-
-{% block main %}
-
-<div>
-    <div class="column" style="background-color:#aaa;">
-        <h2>Aprēķinu kalkulātori:</h2>
-        <li class="left-align"><a href="jauda">Jaudas aprēķins</a></li>
+  <body>
+    <h1>Jaudas aprēķins</h1>
+    <div>
+        <label>Maiņspriegums: </label>
+        <select style="width: 173px; height: 21px;" id="spriegums1">
+            <option value="1-faze">1 fāze</option>
+            <option value="3fazes">3 fāzes</option>
+        </select>
+        <input placeholder="Strāva" id="strava1" type="number">
+        <button onclick="mainspriegums()">Aprēķināt</button>
+        <input placeholder="Jauda" id="jauda1">
     </div>
-    <div class="column" style="background-color:#bbb;">
-        <h2>Konvertāciju kalkulātori:</h2>
-        <li class="left-align"><a href="garums">Garuma konvertācijas</a></li>
+    
+    <div style="margin-top: 10px;">
+        <label >Līdzspriegums: </label>
+        <input placeholder="Sprieguma vērtība" id="spriegums2" type="number">
+        <input placeholder="Strāva" id="strava2" type="number">
+        <button onclick="lidzspriegums()">Aprēķināt</button>
+        <input placeholder="Jauda" id="jauda2">
     </div>
-</div>    
+    
 
-{% endblock %}
+    <script src="script.js"></script>
+  </body>
+</html>
