@@ -61,3 +61,37 @@ function convertLength() {
 
   document.getElementById('result').innerText = `Konvertētā vērtība: ${convertedValue} ${toUnit}`;
 }
+
+function mainspriegums() {
+  const strava = parseFloat(document.getElementById('strava1').value);
+  const sprieguma_veids = document.getElementById('spriegums1').value;
+  let jauda = 0;
+  
+  if (sprieguma_veids === '1-faze') {
+    jauda = 220 * strava;
+  } else {
+    jauda = 400 * strava;
+  }
+  document.getElementById('jauda1').value = jauda;
+}
+
+function lidzspriegums() {
+  const strava = parseFloat(document.getElementById('strava2').value);
+  const spriegums = parseFloat(document.getElementById('spriegums2').value);
+
+  let jauda = strava * spriegums;
+  document.getElementById('jauda2').value = jauda;
+}
+
+function temperaturaUzFar() {
+  let celsijs = parseFloat(document.getElementById('celsija').value);
+  let farenheita = celsijs * 9/5 +32;
+  document.getElementById('farenheita').value = farenheita.toFixed(1);
+}
+
+function temperaturaUzCel() {
+  let farenheita = parseFloat(document.getElementById('farenheita').value);
+  let celsijs = (farenheita-32) * 5/9;
+  document.getElementById('celsija').value = celsijs.toFixed(1);
+
+}
